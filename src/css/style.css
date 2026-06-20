@@ -92,6 +92,7 @@ tr:nth-child(even){background:#f7f9fb}
 .lienhe button{background:var(--cam);color:#fff;border:none;padding:14px;width:100%;border-radius:8px;font-weight:700;font-size:16px;cursor:pointer}
 .lienhe .info p{margin-bottom:10px}
 .lienhe .info b{color:var(--cam)}
+.map{margin-top:26px}
 
 footer{background:#10171f;color:#9fb0c0;text-align:center;padding:24px 0;font-size:14px}
 

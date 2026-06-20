@@ -16,5 +16,9 @@ module.exports = {
   address: "[Bạn bổ sung địa chỉ nếu muốn hiện]",
   area: "[Bạn bổ sung khu vực phục vụ]",
   hours: "Hỗ trợ 24/7 – có mặt nhanh theo lịch khách",
-  email: ""
+  email: "",
+
+  // Bản đồ: tạm tìm theo tên trung tâm. Khi có địa chỉ chính xác,
+  // đổi mapQuery thành địa chỉ đầy đủ để ghim đúng điểm.
+  mapQuery: "TRUNG TÂM BẢO HÀNH SỬA CHỮA NHÀ BẾP QUANG NGA"
 };
