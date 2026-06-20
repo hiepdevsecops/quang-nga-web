@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eaf2fb"/><stop offset="1" stop-color="#cdddee"/>
+    </linearGradient>
+    <radialGradient id="ring" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb347"/><stop offset="0.7" stop-color="#f6921e"/><stop offset="1" stop-color="#b35e00"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b2f36"/><stop offset="1" stop-color="#13161b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- counter -->
+  <rect x="0" y="330" width="800" height="120" fill="#dfe8f1"/>
+  <!-- cooktop glass -->
+  <rect x="170" y="150" width="460" height="210" rx="16" fill="url(#glass)" stroke="#0a0c0f" stroke-width="3"/>
+  <!-- induction zones -->
+  <circle cx="300" cy="245" r="78" fill="none" stroke="#3a4250" stroke-width="3"/>
+  <circle cx="300" cy="245" r="58" fill="none" stroke="#4a5360" stroke-width="2"/>
+  <circle cx="500" cy="245" r="70" fill="url(#ring)" opacity="0.95"/>
+  <circle cx="500" cy="245" r="70" fill="none" stroke="#ffd9a0" stroke-width="2"/>
+  <!-- pot on the glowing zone -->
+  <ellipse cx="500" cy="222" rx="62" ry="16" fill="#9aa3ad"/>
+  <rect x="438" y="180" width="124" height="44" rx="6" fill="#b8c0c9"/>
+  <ellipse cx="500" cy="180" rx="62" ry="14" fill="#cfd6dd"/>
+  <rect x="560" y="190" width="40" height="9" rx="4" fill="#7b838c"/>
+  <!-- control display E3 -->
+  <rect x="360" y="320" width="80" height="30" rx="5" fill="#0b0d10" stroke="#2a2f36"/>
+  <text x="400" y="342" font-family="Consolas,monospace" font-size="22" fill="#ff4d4d" text-anchor="middle" font-weight="bold">E3</text>
+  <!-- wrench -->
+  <g transform="rotate(40 650 120)">
+    <rect x="600" y="108" width="120" height="22" rx="11" fill="#f6921e"/>
+    <circle cx="600" cy="119" r="22" fill="#f6921e"/><circle cx="600" cy="119" r="10" fill="#cdddee"/>
+    <circle cx="720" cy="119" r="22" fill="#f6921e"/><circle cx="720" cy="119" r="10" fill="#cdddee"/>
+  </g>
+  <text x="400" y="415" font-family="Segoe UI,Arial" font-size="26" fill="#0d4f8b" text-anchor="middle" font-weight="bold">SỬA BẾP TỪ – QUANG NGA</text>
+</svg>

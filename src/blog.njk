@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: "Bài viết & mẹo hữu ích"
+description: "Bài viết, mẹo sử dụng và bảo quản thiết bị nhà bếp từ Trung tâm Quang Nga."
+permalink: "/blog/index.html"
+---
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Bài Viết & Mẹo Hữu Ích</h2>
+    <p class="section-sub">Kinh nghiệm dùng và bảo quản thiết bị nhà bếp</p>
+    <div class="post-grid">
+      {% if collections.post.length == 0 %}
+        <p class="empty">Chưa có bài viết nào. Hãy đăng bài trong trang quản trị /admin.</p>
+      {% endif %}
+      {% for post in collections.post | reverse %}
+        <a class="post-card" href="{{ post.url }}">
+          {% if post.data.cover %}
+            <div class="thumb" style="background-image:url('{{ post.data.cover }}')"></div>
+          {% else %}
+            <div class="thumb">🍳</div>
+          {% endif %}
+          <div class="body">
+            <h3>{{ post.data.title }}</h3>
+            <div class="meta">🗓 {{ post.date | dateVi }}</div>
+            <p>{{ post.data.excerpt or (post.templateContent | excerptFallback) }}</p>
+            <span class="more">Đọc tiếp →</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,4 @@
+# Cấu hình deploy lên Netlify
+[build]
+  command = "npm run build"
+  publish = "_site"

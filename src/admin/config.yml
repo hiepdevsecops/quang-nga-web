@@ -1,0 +1,31 @@
+# ===== Cấu hình Decap CMS =====
+# Sau khi deploy lên Netlify, bật Identity + Git Gateway thì đăng nhập được.
+backend:
+  name: git-gateway
+  branch: main            # nhánh chính của kho GitHub
+
+# Ngôn ngữ giao diện admin
+locale: vi
+
+# Nơi lưu ảnh tải lên
+media_folder: "src/uploads"
+public_folder: "/uploads"
+
+# Nút "Xem trước trang" trong admin
+site_url: https://quang-nga.netlify.app
+
+collections:
+  - name: "baiviet"
+    label: "Bài viết"
+    label_singular: "Bài viết"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Tiêu đề", name: "title", widget: "string" }
+      - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Tóm tắt ngắn", name: "excerpt", widget: "string", required: false, hint: "1–2 câu hiện ở danh sách bài viết" }
+      - { label: "Ảnh đại diện", name: "cover", widget: "image", required: false }
+      - { label: "Nội dung", name: "body", widget: "markdown" }

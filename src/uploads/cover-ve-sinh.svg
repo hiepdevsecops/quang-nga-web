@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f7ef"/><stop offset="1" stop-color="#cdeadd"/>
+    </linearGradient>
+    <linearGradient id="glass2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b2f36"/><stop offset="1" stop-color="#13161b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg2)"/>
+  <!-- cooktop -->
+  <rect x="150" y="150" width="500" height="200" rx="16" fill="url(#glass2)" stroke="#0a0c0f" stroke-width="3"/>
+  <circle cx="290" cy="250" r="64" fill="none" stroke="#3a4250" stroke-width="3"/>
+  <circle cx="510" cy="250" r="64" fill="none" stroke="#3a4250" stroke-width="3"/>
+  <!-- shine being cleaned -->
+  <path d="M210 200 L360 200 L320 300 L250 300 Z" fill="#ffffff" opacity="0.12"/>
+  <!-- cloth -->
+  <g transform="rotate(-12 470 215)">
+    <rect x="400" y="180" width="150" height="105" rx="14" fill="#36c08a"/>
+    <rect x="400" y="180" width="150" height="105" rx="14" fill="none" stroke="#27a376" stroke-width="3"/>
+    <line x1="420" y1="200" x2="535" y2="200" stroke="#2fae7d" stroke-width="3"/>
+    <line x1="420" y1="225" x2="535" y2="225" stroke="#2fae7d" stroke-width="3"/>
+    <line x1="420" y1="250" x2="535" y2="250" stroke="#2fae7d" stroke-width="3"/>
+  </g>
+  <!-- sparkles -->
+  <text x="250" y="150" font-size="34" text-anchor="middle">✨</text>
+  <text x="560" y="160" font-size="26" text-anchor="middle">✨</text>
+  <text x="400" y="415" font-family="Segoe UI,Arial" font-size="26" fill="#1e7e45" text-anchor="middle" font-weight="bold">VỆ SINH – BẢO DƯỠNG ĐÚNG CÁCH</text>
+</svg>

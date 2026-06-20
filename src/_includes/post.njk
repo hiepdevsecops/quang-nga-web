@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<section>
+  <div class="wrap">
+    <article class="article">
+      <a class="back" href="/blog/">← Tất cả bài viết</a>
+      <h1>{{ title }}</h1>
+      <div class="meta">🗓 {{ page.date | dateVi }}</div>
+      {% if cover %}<img class="cover" src="{{ cover }}" alt="{{ title }}">{% endif %}
+      <div class="content">
+        {{ content | safe }}
+      </div>
+      <p style="margin-top:30px"><a href="tel:{{ site.phone }}" class="btn btn-cam">☎ Gọi tư vấn {{ site.phoneDisplay }}</a></p>
+    </article>
+  </div>
+</section>

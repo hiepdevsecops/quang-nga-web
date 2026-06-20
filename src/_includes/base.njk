@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if title %}{{ title }} — {{ site.brand }}{% else %}{{ site.name }}{% endif %}</title>
+<meta name="description" content="{{ description or excerpt or 'Trung tâm bảo hành, sửa chữa thiết bị nhà bếp Quang Nga: bếp từ, bếp hồng ngoại, lò vi sóng, lò nướng, máy hút mùi, máy rửa bát. Thợ đến tận nhà, bảo hành dài hạn.' }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}">
+<meta property="og:description" content="{{ description or excerpt or 'Sửa chữa - bảo hành thiết bị nhà bếp tận nhà.' }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap top-bar">
+    <a href="/" class="logo">TRUNG TÂM BẢO HÀNH<br>SỬA CHỮA NHÀ BẾP <span>{{ site.brand }}</span></a>
+    <nav class="menu">
+      <a href="/">Trang chủ</a>
+      <a href="/#dichvu">Dịch vụ</a>
+      <a href="/#quytrinh">Quy trình</a>
+      <a href="/#banggia">Bảng giá</a>
+      <a href="/blog/">Bài viết</a>
+      <a href="/#lienhe">Liên hệ</a>
+    </nav>
+    <a href="tel:{{ site.phone }}" class="hotline-top">☎ {{ site.phoneDisplay }}</a>
+    <button class="hamburger" aria-label="Mở menu">☰</button>
+  </div>
+</header>
+
+{{ content | safe }}
+
+<footer>
+  © 2026 {{ site.name }}.<br>
+  ☎ Hotline: {{ site.phoneDisplay }} – {{ site.phone2Display }} &nbsp;·&nbsp; Hỗ trợ Zalo / Facebook 24/7
+</footer>
+
+<div class="float">
+  <a href="tel:{{ site.phone }}" class="f-goi">GỌI</a>
+  <a href="https://zalo.me/{{ site.zalo }}" class="f-zalo">ZALO</a>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "quang-nga-site",
+  "version": "1.0.0",
+  "description": "Website Trung tâm bảo hành - sửa chữa nhà bếp Quang Nga (Eleventy + Decap CMS)",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
