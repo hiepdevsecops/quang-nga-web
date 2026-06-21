@@ -28,4 +28,5 @@ collections:
       - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Tóm tắt ngắn", name: "excerpt", widget: "string", required: false, hint: "1–2 câu hiện ở danh sách bài viết" }
       - { label: "Ảnh đại diện", name: "cover", widget: "image", required: false }
+      - { label: "Video (link YouTube)", name: "video", widget: "string", required: false, hint: "Dán link YouTube nếu có, vd https://youtu.be/abc12345678 — để trống nếu không dùng" }
       - { label: "Nội dung", name: "body", widget: "markdown" }

@@ -17,6 +17,13 @@ module.exports = function (eleventyConfig) {
     return new Date(value).toISOString();
   });
 
+  // Lấy ID video từ link YouTube (nhiều dạng: youtu.be, watch?v=, embed, shorts)
+  eleventyConfig.addFilter("youtubeId", function (url) {
+    if (!url) return "";
+    const m = String(url).match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
+    return m ? m[1] : "";
+  });
+
   // Cắt nội dung làm tóm tắt dự phòng (nếu bài không nhập tóm tắt)
   eleventyConfig.addFilter("excerptFallback", function (content, max) {
     const text = String(content || "").replace(/<[^>]+>/g, "").trim();

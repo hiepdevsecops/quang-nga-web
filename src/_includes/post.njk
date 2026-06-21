@@ -8,6 +8,14 @@ layout: base.njk
       <h1>{{ title }}</h1>
       <div class="meta">🗓 {{ page.date | dateVi }}</div>
       {% if cover %}<img class="cover" src="{{ cover }}" alt="{{ title }}">{% endif %}
+      {% set ytid = video | youtubeId %}
+      {% if ytid %}
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/{{ ytid }}" title="{{ title }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+      {% endif %}
       <div class="content">
         {{ content | safe }}
       </div>
