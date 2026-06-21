@@ -8,5 +8,5 @@ module.exports = {
   slogan: "Nhanh – Chuẩn – Giá Rẻ – Uy Tín Hàng Đầu",
   url: "https://suachuaquangnga.netlify.app",     // đổi thành tên miền thật sau khi có
   email: "",
-  googleVerify: ""                                // mã xác minh Google Search Console (dán vào sau)
+  googleVerify: "LW01kF7VGaP288o8JtfWZGAlJiOAFRMDfZ07BOEsJSY"   // mã xác minh Google Search Console
 };
