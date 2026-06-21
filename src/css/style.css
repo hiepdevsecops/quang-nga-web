@@ -140,7 +140,7 @@ footer{background:#10171f;color:#9fb0c0;text-align:center;padding:24px 0;font-si
     box-shadow:-4px 0 20px rgba(0,0,0,.15);transition:right .25s;z-index:60}
   nav.menu.open{right:0}
   nav.menu a{margin:10px 0;font-size:18px;width:100%;border-bottom:1px solid #f0f0f0;padding-bottom:10px}
-  .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:55}
+  .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:40}
   .nav-overlay.show{display:block}
 }
 @media(max-width:680px){
