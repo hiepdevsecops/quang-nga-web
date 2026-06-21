@@ -11,6 +11,7 @@
 <meta property="og:description" content="{{ description or excerpt or 'Sửa chữa - bảo hành thiết bị nhà bếp tận nhà.' }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <link rel="stylesheet" href="/css/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -43,5 +44,17 @@
 </div>
 
 <script src="/js/main.js"></script>
+<script>
+  // Khi nhận lời mời / xác nhận, tự chuyển vào trang quản trị sau khi đăng nhập
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
