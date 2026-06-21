@@ -1,3 +1,7 @@
 node_modules/
 _site/
 .DS_Store
+*.docx
+*.pdf
+_taileu_src.txt
+screenshots/
