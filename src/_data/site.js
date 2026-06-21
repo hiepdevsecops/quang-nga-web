@@ -7,5 +7,6 @@ module.exports = {
   brand: "QUANG NGA",
   slogan: "Nhanh – Chuẩn – Giá Rẻ – Uy Tín Hàng Đầu",
   url: "https://suachuaquangnga.netlify.app",     // đổi thành tên miền thật sau khi có
-  email: ""
+  email: "",
+  googleVerify: ""                                // mã xác minh Google Search Console (dán vào sau)
 };
