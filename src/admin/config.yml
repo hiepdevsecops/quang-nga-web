@@ -7,6 +7,12 @@ backend:
 # Ngôn ngữ giao diện admin
 locale: vi
 
+# Đường dẫn bài viết: bỏ dấu tiếng Việt cho chuẩn SEO (vd: sua-bep-tu-washi)
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 # Nơi lưu ảnh tải lên
 media_folder: "src/uploads"
 public_folder: "/uploads"
