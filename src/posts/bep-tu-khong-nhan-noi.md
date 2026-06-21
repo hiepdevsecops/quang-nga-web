@@ -2,6 +2,14 @@
 title: "Bếp từ không nhận nồi: nguyên nhân và cách khắc phục"
 date: 2026-06-19
 excerpt: "Bếp từ kêu tít tít rồi tắt, không nóng dù đã đặt nồi? Có thể do nồi không hợp hoặc lỗi mâm từ, bo mạch."
+seo:
+  metaTitle: "Bếp từ không nhận nồi: nguyên nhân & cách khắc phục | Quang Nga"
+  metaDescription: "Bếp từ kêu tít rồi tắt, không nhận nồi? Cách kiểm tra nồi và xử lý lỗi mâm từ, bo mạch. Gọi thợ sửa bếp từ tận nhà Quang Nga."
+  keywords:
+    - "sửa bếp từ"
+    - "bếp từ không nhận nồi"
+    - "bếp từ kêu tít"
+    - "sửa bếp từ tại nhà"
 cover: "/uploads/cover-bep-tu.svg"
 video: ""
 ---

@@ -7,6 +7,9 @@ layout: base.njk
       <a class="back" href="/blog/">← Tất cả bài viết</a>
       <h1>{{ title }}</h1>
       <div class="meta">🗓 {{ page.date | dateVi }}</div>
+      {% if seo.keywords %}
+      <div class="tags">{% for k in seo.keywords %}<span class="tag">#{{ k }}</span>{% endfor %}</div>
+      {% endif %}
       {% if cover %}<img class="cover" src="{{ cover }}" alt="{{ title }}">{% endif %}
       {% set ytid = video | youtubeId %}
       {% if ytid %}
@@ -23,3 +26,16 @@ layout: base.njk
     </article>
   </div>
 </section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ (seo.metaTitle or title) | dump | safe }},
+  "description": {{ (seo.metaDescription or excerpt or title) | dump | safe }},
+  "datePublished": "{{ page.date | dateISO }}",
+  "image": {% if cover %}{{ (site.url + cover) | dump | safe }}{% else %}{{ (site.url + "/uploads/cover-bep-tu.svg") | dump | safe }}{% endif %},
+  "author": { "@type": "Organization", "name": {{ site.name | dump | safe }} },
+  "publisher": { "@type": "Organization", "name": {{ site.name | dump | safe }} },
+  "mainEntityOfPage": {{ (site.url + page.url) | dump | safe }}
+}
+</script>

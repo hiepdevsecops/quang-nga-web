@@ -2,6 +2,14 @@
 title: "Bếp từ báo lỗi E3 là gì? Nguyên nhân và cách xử lý"
 date: 2026-06-18
 excerpt: "Lỗi E3 trên bếp từ thường liên quan đến điện áp hoặc quá nhiệt. Tìm hiểu nguyên nhân và cách khắc phục an toàn."
+seo:
+  metaTitle: "Bếp từ lỗi E3: nguyên nhân & cách sửa nhanh | Quang Nga"
+  metaDescription: "Bếp từ báo lỗi E3 do điện áp cao hoặc quá nhiệt. Hướng dẫn kiểm tra, khắc phục an toàn và khi nào nên gọi thợ sửa bếp từ tận nhà."
+  keywords:
+    - "sửa bếp từ"
+    - "lỗi E3 bếp từ"
+    - "bếp từ báo lỗi"
+    - "sửa bếp từ tại nhà"
 cover: "/uploads/cover-bep-tu.svg"
 video: ""
 ---

@@ -27,6 +27,15 @@ collections:
       - { label: "Tiêu đề", name: "title", widget: "string" }
       - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Tóm tắt ngắn", name: "excerpt", widget: "string", required: false, hint: "1–2 câu hiện ở danh sách bài viết" }
+      - label: "SEO (tùy chọn – giúp lên Google)"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Tiêu đề SEO", name: "metaTitle", widget: "string", required: false, hint: "Dòng tiêu đề hiện trên Google. Nên 50–60 ký tự và chứa từ khóa chính, vd: 'Sửa bếp từ lỗi E3 tại nhà | Quang Nga'. Để trống sẽ dùng tiêu đề bài." }
+          - { label: "Mô tả SEO", name: "metaDescription", widget: "text", required: false, hint: "Đoạn mô tả hiện dưới tiêu đề trên Google (~150 ký tự, chứa từ khóa). Để trống sẽ dùng tóm tắt." }
+          - { label: "Từ khóa / Thẻ chủ đề", name: "keywords", widget: "list", required: false, hint: "Mỗi từ khóa gõ rồi Enter, vd: sửa bếp từ, lỗi E3, thay mặt kính. Sẽ hiện thành thẻ dưới bài viết." }
       - { label: "Ảnh đại diện", name: "cover", widget: "image", required: false }
       - { label: "Video (link YouTube)", name: "video", widget: "string", required: false, hint: "Dán link YouTube nếu có, vd https://youtu.be/abc12345678 — để trống nếu không dùng" }
       - { label: "Nội dung", name: "body", widget: "markdown" }

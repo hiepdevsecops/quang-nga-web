@@ -3,15 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if title %}{{ title }} — {{ site.brand }}{% else %}{{ site.name }}{% endif %}</title>
-<meta name="description" content="{{ description or excerpt or 'Trung tâm bảo hành, sửa chữa thiết bị nhà bếp Quang Nga: bếp từ, bếp hồng ngoại, lò vi sóng, lò nướng, máy hút mùi, máy rửa bát. Thợ đến tận nhà, bảo hành dài hạn.' }}">
+<title>{% if seo.metaTitle %}{{ seo.metaTitle }}{% elif title %}{{ title }} — {{ site.brand }}{% else %}{{ site.name }}{% endif %}</title>
+<meta name="description" content="{{ seo.metaDescription or description or excerpt or 'Trung tâm bảo hành, sửa chữa thiết bị nhà bếp Quang Nga: bếp từ, bếp hồng ngoại, lò vi sóng, lò nướng, máy hút mùi, máy rửa bát. Thợ đến tận nhà, bảo hành dài hạn.' }}">
+{% if seo.keywords %}<meta name="keywords" content="{{ seo.keywords | join(', ') }}">{% endif %}
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}">
-<meta property="og:description" content="{{ description or excerpt or 'Sửa chữa - bảo hành thiết bị nhà bếp tận nhà.' }}">
+<meta property="og:title" content="{% if seo.metaTitle %}{{ seo.metaTitle }}{% elif title %}{{ title }}{% else %}{{ site.name }}{% endif %}">
+<meta property="og:description" content="{{ seo.metaDescription or description or excerpt or 'Sửa chữa - bảo hành thiết bị nhà bếp tận nhà.' }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <link rel="stylesheet" href="/css/style.css">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": {{ site.name | dump | safe }},
+  "image": {{ (site.url + "/uploads/cover-thiet-bi.svg") | dump | safe }},
+  "url": {{ site.url | dump | safe }},
+  "telephone": {{ site.phone | dump | safe }},
+  "description": "Trung tâm bảo hành, sửa chữa thiết bị nhà bếp: bếp từ, bếp điện, điều hòa, máy giặt, máy rửa bát, lò vi sóng. Thợ tận nhà, bảo hành dài hạn.",
+  "areaServed": {{ site.area | dump | safe }},
+  "openingHours": "Mo-Su 08:00-20:00"
+}
+</script>
 </head>
 <body>
 

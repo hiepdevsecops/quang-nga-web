@@ -2,6 +2,14 @@
 title: "Thay mặt kính bếp từ giá bao nhiêu? Khi nào cần thay"
 date: 2026-06-20
 excerpt: "Mặt kính bếp từ nứt, vỡ có nên dùng tiếp? Giá thay mặt kính phụ thuộc hãng và kích thước. Tham khảo chi tiết."
+seo:
+  metaTitle: "Thay mặt kính bếp từ giá bao nhiêu 2026? | Quang Nga"
+  metaDescription: "Giá thay mặt kính bếp từ theo hãng và kích thước, khi nào cần thay. Thay kính chính hãng, làm tận nhà, bảo hành – Quang Nga."
+  keywords:
+    - "thay mặt kính bếp từ"
+    - "giá thay mặt kính bếp từ"
+    - "vỡ mặt kính bếp từ"
+    - "sửa bếp từ"
 cover: "/uploads/cover-ve-sinh.svg"
 video: ""
 ---
