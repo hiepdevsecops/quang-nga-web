@@ -5,7 +5,7 @@ module.exports = {
   name: "TRUNG TÂM BẢO HÀNH – SỬA CHỮA NHÀ BẾP QUANG NGA",
   brand: "QUANG NGA",
   slogan: "Nhanh – Chuẩn – Giá Rẻ – Uy Tín Hàng Đầu",
-  url: "https://quang-nga.netlify.app",          // đổi thành tên miền thật sau khi có
+  url: "https://suachuaquangnga.netlify.app",     // đổi thành tên miền thật sau khi có
 
   phone: "0353218558",                            // số chính (nút gọi)
   phoneDisplay: "035 321 8558",                   // số chính hiển thị

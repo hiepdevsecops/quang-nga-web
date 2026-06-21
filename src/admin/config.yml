@@ -12,7 +12,7 @@ media_folder: "src/uploads"
 public_folder: "/uploads"
 
 # Nút "Xem trước trang" trong admin
-site_url: https://quang-nga.netlify.app
+site_url: https://suachuaquangnga.netlify.app
 
 collections:
   - name: "baiviet"
