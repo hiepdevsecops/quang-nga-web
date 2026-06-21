@@ -17,6 +17,11 @@ module.exports = function (eleventyConfig) {
     return new Date(value).toISOString();
   });
 
+  // Chuyển số hiển thị thành link gọi: "035 321 8558" -> "0353218558"
+  eleventyConfig.addFilter("telLink", function (s) {
+    return String(s == null ? "" : s).replace(/[^\d+]/g, "");
+  });
+
   // Lấy ID video từ link YouTube (nhiều dạng: youtu.be, watch?v=, embed, shorts)
   eleventyConfig.addFilter("youtubeId", function (url) {
     if (!url) return "";

@@ -11,8 +11,8 @@ description: "Trung tâm bảo hành, sửa chữa thiết bị nhà bếp Quang
     <p><b>{{ site.slogan }}</b><br>
        Chuyên bếp từ, bếp điện, điều hòa, máy giặt – máy sấy, máy rửa bát, lò nướng – lò vi sóng…
        Kỹ thuật viên giàu kinh nghiệm, có mặt nhanh, linh kiện chính hãng, bảo hành dài hạn.</p>
-    <a href="tel:{{ site.phone }}" class="btn btn-cam">☎ Gọi ngay {{ site.phoneDisplay }}</a>
-    <a href="tel:{{ site.phone2 }}" class="btn btn-vien">☎ {{ site.phone2Display }}</a>
+    <a href="tel:{{ lienhe.phone1 | telLink }}" class="btn btn-cam">☎ Gọi ngay {{ lienhe.phone1 }}</a>
+    {% if lienhe.phone2 %}<a href="tel:{{ lienhe.phone2 | telLink }}" class="btn btn-vien">☎ {{ lienhe.phone2 }}</a>{% endif %}
   </div>
 </section>
 
@@ -78,23 +78,6 @@ description: "Trung tâm bảo hành, sửa chữa thiết bị nhà bếp Quang
   </div>
 </section>
 
-<!-- BANG GIA -->
-<section id="banggia" class="why">
-  <div class="wrap">
-    <h2 class="section-title">Bảng Giá Tham Khảo</h2>
-    <p class="section-sub">Giá kiểm tra tận nhà – báo trước khi sửa</p>
-    <table>
-      <tr><th>Dịch vụ</th><th>Giá tham khảo</th></tr>
-      <tr><td>Kiểm tra & vệ sinh bếp từ</td><td>150.000 – 250.000đ</td></tr>
-      <tr><td>Thay mặt kính bếp từ</td><td>400.000 – 900.000đ</td></tr>
-      <tr><td>Thay sò công suất / bo mạch</td><td>Tùy linh kiện – báo giá trước</td></tr>
-      <tr><td>Sửa lò vi sóng / lò nướng</td><td>200.000 – 600.000đ</td></tr>
-      <tr><td>Sửa máy hút mùi / máy rửa bát</td><td>250.000 – 800.000đ</td></tr>
-    </table>
-    <p class="note">* Giá có thể thay đổi tùy tình trạng thiết bị và linh kiện thực tế.</p>
-  </div>
-</section>
-
 <!-- BAI VIET MOI -->
 <section id="baiviet">
   <div class="wrap">
@@ -153,16 +136,16 @@ description: "Trung tâm bảo hành, sửa chữa thiết bị nhà bếp Quang
         <button type="submit">Gửi yêu cầu</button>
       </form>
       <div class="info">
-        <p>📞 Hotline: <b>{{ site.phoneDisplay }} – {{ site.phone2Display }}</b></p>
+        <p>📞 Hotline: <b>{{ lienhe.phone1 }}{% if lienhe.phone2 %} – {{ lienhe.phone2 }}{% endif %}</b></p>
         <p>💬 Hỗ trợ Zalo – Facebook: <b>24/7</b></p>
-        <p>🕒 Thời gian: <b>{{ site.hours }}</b></p>
-        {% if "[" not in site.address %}<p>📍 Địa chỉ: <b>{{ site.address }}</b></p>{% endif %}
-        {% if "[" not in site.area %}<p>🗺️ Khu vực phục vụ: <b>{{ site.area }}</b></p>{% endif %}
+        {% if lienhe.hours %}<p>🕒 Thời gian: <b>{{ lienhe.hours }}</b></p>{% endif %}
+        {% if lienhe.address %}<p>📍 Địa chỉ: <b>{{ lienhe.address }}</b></p>{% endif %}
+        {% if lienhe.area %}<p>🗺️ Khu vực phục vụ: <b>{{ lienhe.area }}</b></p>{% endif %}
       </div>
     </div>
     <div class="map">
       <iframe
-        src="https://www.google.com/maps?q={{ site.mapQuery | urlencode }}&output=embed"
+        src="https://www.google.com/maps?q={{ lienhe.mapQuery | urlencode }}&output=embed"
         width="100%" height="320" style="border:0;border-radius:12px"
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         title="Bản đồ {{ site.brand }}"></iframe>

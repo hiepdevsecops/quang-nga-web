@@ -20,9 +20,9 @@
   "name": {{ site.name | dump | safe }},
   "image": {{ (site.url + "/uploads/cover-thiet-bi.svg") | dump | safe }},
   "url": {{ site.url | dump | safe }},
-  "telephone": {{ site.phone | dump | safe }},
+  "telephone": {{ (lienhe.phone1 | telLink) | dump | safe }},
   "description": "Trung tâm bảo hành, sửa chữa thiết bị nhà bếp: bếp từ, bếp điện, điều hòa, máy giặt, máy rửa bát, lò vi sóng. Thợ tận nhà, bảo hành dài hạn.",
-  "areaServed": {{ site.area | dump | safe }},
+  "areaServed": {{ lienhe.area | dump | safe }},
   "openingHours": "Mo-Su 08:00-20:00"
 }
 </script>
@@ -36,11 +36,10 @@
       <a href="/">Trang chủ</a>
       <a href="/#dichvu">Dịch vụ</a>
       <a href="/#quytrinh">Quy trình</a>
-      <a href="/#banggia">Bảng giá</a>
       <a href="/blog/">Bài viết</a>
       <a href="/#lienhe">Liên hệ</a>
     </nav>
-    <a href="tel:{{ site.phone }}" class="hotline-top">☎ {{ site.phoneDisplay }}</a>
+    <a href="tel:{{ lienhe.phone1 | telLink }}" class="hotline-top">☎ {{ lienhe.phone1 }}</a>
     <button class="hamburger" aria-label="Mở menu">☰</button>
   </div>
 </header>
@@ -49,12 +48,12 @@
 
 <footer>
   © 2026 {{ site.name }}.<br>
-  ☎ Hotline: {{ site.phoneDisplay }} – {{ site.phone2Display }} &nbsp;·&nbsp; Hỗ trợ Zalo / Facebook 24/7
+  ☎ Hotline: {{ lienhe.phone1 }}{% if lienhe.phone2 %} – {{ lienhe.phone2 }}{% endif %} &nbsp;·&nbsp; Hỗ trợ Zalo / Facebook 24/7
 </footer>
 
 <div class="float">
-  <a href="tel:{{ site.phone }}" class="f-goi">GỌI</a>
-  <a href="https://zalo.me/{{ site.zalo }}" class="f-zalo">ZALO</a>
+  <a href="tel:{{ lienhe.phone1 | telLink }}" class="f-goi">GỌI</a>
+  <a href="https://zalo.me/{{ lienhe.zalo | telLink }}" class="f-zalo">ZALO</a>
 </div>
 
 <script src="/js/main.js"></script>

@@ -45,3 +45,19 @@ collections:
       - { label: "Ảnh đại diện", name: "cover", widget: "image", required: false }
       - { label: "Video (link YouTube)", name: "video", widget: "string", required: false, hint: "Dán link YouTube nếu có, vd https://youtu.be/abc12345678 — để trống nếu không dùng" }
       - { label: "Nội dung", name: "body", widget: "markdown" }
+
+  - name: "caidat"
+    label: "Cài đặt website"
+    files:
+      - name: "lienhe"
+        label: "Thông tin liên hệ"
+        file: "src/_data/lienhe.json"
+        description: "Số điện thoại, Zalo, địa chỉ, bản đồ hiển thị trên toàn web"
+        fields:
+          - { label: "Số điện thoại 1 (chính)", name: "phone1", widget: "string", hint: "Cứ gõ như bình thường, vd: 035 321 8558" }
+          - { label: "Số điện thoại 2 (phụ)", name: "phone2", widget: "string", required: false }
+          - { label: "Số Zalo", name: "zalo", widget: "string", required: false }
+          - { label: "Địa chỉ", name: "address", widget: "string", required: false, hint: "Để trống nếu chưa muốn hiện" }
+          - { label: "Khu vực phục vụ", name: "area", widget: "string", required: false }
+          - { label: "Giờ làm việc / Hỗ trợ", name: "hours", widget: "string", required: false }
+          - { label: "Bản đồ – tìm theo", name: "mapQuery", widget: "string", required: false, hint: "Dán địa chỉ đầy đủ để ghim Google Map đúng điểm" }
